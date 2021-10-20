@@ -1,0 +1,34 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- inform
+- signup
+slots:
+  email:
+    type: unfeaturized
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: |
+      Hello! How can I help you?
+  - text: |
+      Hi!
+  utter_ask_email:
+  - text: |
+      What is your email address?
+  utter_signedup:
+  - text: |
+      Check your inbox at {email} in order to finish signing up on Liberta Casa!
+  - text: You're all set! Check your inbox at {email} to confirm your registration.
+actions:
+- '...'
+- utter_greet
+- utter_signedup
+forms:
+  signup_form:
+    required_slots:
+      email:
+      - type: from_text

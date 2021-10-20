@@ -1,0 +1,14 @@
+responses:
+   utter_greet:
+       - text: |
+           Hello! How can I help you?
+       - text: |
+           Hi!
+   utter_ask_email:
+       - text: |
+           What is your email address?
+   utter_signedup:
+       - text: |
+           Check your inbox at {email} in order to finish signing up on Liberta Casa!
+       - text: |
+           You're all set! Check your inbox at {email} to confirm your registration.

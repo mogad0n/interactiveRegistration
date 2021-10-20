@@ -1,0 +1,14 @@
+rules:
+ - rule: activate signup form
+   steps:
+   - intent: signup
+   - action: signup_form
+   - active_loop: signup_form
+
+ - rule: submit form
+   condition:
+   - active_loop: signup_form
+   steps:
+   - action: signup_form
+   - active_loop: null
+   - action: utter_signedup

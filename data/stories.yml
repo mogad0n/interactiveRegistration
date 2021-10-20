@@ -1,0 +1,8 @@
+stories:
+ - story: greet and signup
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: signup
+   - action: signup_form
+   - active_loop: signup_form
