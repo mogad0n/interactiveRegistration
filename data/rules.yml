@@ -6,7 +6,7 @@ policies:
 rules:
  - rule: activate signup form
    steps:
-   - intent: signup
+   - intent: inform_email
    - action: signup_form
    - active_loop: signup_form
 

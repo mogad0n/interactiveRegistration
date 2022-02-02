@@ -6,5 +6,7 @@ stories:
    - intent: greet
    - action: utter_greet
    - intent: signup
+   - action: utter_ask_email
+   - intent: inform_email
    - action: signup_form
    - active_loop: signup_form

@@ -4,8 +4,8 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - greet
-- inform
 - signup
+- inform_email
 slots:
   email:
     type: text
