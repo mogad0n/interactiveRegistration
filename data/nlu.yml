@@ -1,3 +1,5 @@
+version: "3.0"
+
 nlu:
 - intent: greet
   examples: |
@@ -15,7 +17,7 @@ nlu:
     - Can you sign me up for an account?
     - How do I sign up?
 
-- intent: inform
+- intent: inform_email
   examples: |
     - My email is example@example.com
     - random@example.com
