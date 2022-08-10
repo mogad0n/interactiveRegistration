@@ -2,4 +2,8 @@ forms:
   signup_form:
     required_slots:
       email:
-      - type: from_text
+      - type: from_slot
+      first_name:
+      - type: from_slot
+      last_name:
+      - type: from_slot
