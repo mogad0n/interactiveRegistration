@@ -2,29 +2,54 @@ version: '3.1'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+entities:
+- email
+- last_name
+- first_name
+- full_name
 intents:
 - greet
+- inform
 - signup
-- inform_email
+- bye
+- affirm
+- deny
+- out_of_scope
 slots:
   email:
+    type: any
+    influence_conversation: false
+  first_name:
     type: text
     influence_conversation: false
-    mappings:
-    - type: from_text
+  last_name:
+    type: text
+    influence_conversation: false
 responses:
+  utter_bye:
+  - text: |
+            Goodbye!
+  utter_out_of_scope/other:
+  - text: |
+            I dont understand sorry!
+  utter_out_of_scope/non_english:
+  - text: |
+            I only speak English :(
+  utter_bot_challenge:
+  - text: |
+            I am a bot!
   utter_greet:
   - text: |
-      Hello! How can I help you?
+            Hello! How can I help you?
   - text: |
-      Hi!
+            Hi!
   utter_ask_email:
   - text: |
-      What is your email address?
+            What is your email address?
   utter_signedup:
   - text: |
       Check your inbox at {email} in order to finish signing up on Liberta Casa!
-  - text: You're all set! Check your inbox at {email} to confirm your registration.
+      You're all set! Check your inbox at {email} to confirm your registration.      
 actions:
 - '...'
 - utter_greet
@@ -32,4 +57,9 @@ actions:
 forms:
   signup_form:
     required_slots:
-    - email
+      email:
+      - type: from_slot
+      first_name:
+      - type: from_slot
+      last_name:
+      - type: from_slot
