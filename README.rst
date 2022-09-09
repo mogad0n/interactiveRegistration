@@ -18,3 +18,9 @@ Rasa setup and command list
 
 - ``rasa init`` to create a new project
 - ``rasa train`` to train your model
+
+Entity Extraction
+=================
+
+- Using duckling the easy way ``docker run -p 8000:8000 rasa/duckling``
+- docs https://duckling.wit.ai/#getting-started

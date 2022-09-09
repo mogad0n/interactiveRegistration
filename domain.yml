@@ -14,17 +14,24 @@ intents:
 - bye
 - affirm
 - deny
+- bot_challange
 - out_of_scope
 slots:
   email:
     type: any
     influence_conversation: false
+    mappings:
+      - type: custom
   first_name:
     type: text
     influence_conversation: false
+    mappings:
+      - type: custom
   last_name:
     type: text
     influence_conversation: false
+    mappings:
+      - type: custom
 responses:
   utter_bye:
   - text: |
@@ -57,9 +64,9 @@ actions:
 forms:
   signup_form:
     required_slots:
-      email:
-      - type: from_slot
-      first_name:
-      - type: from_slot
-      last_name:
-      - type: from_slot
+      - email
+      # - type: from_slot
+      - first_name
+      # - type: from_slot
+      - last_name
+      # - type: from_slot

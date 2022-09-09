@@ -15,7 +15,7 @@ pipeline:
   - name: DucklingEntityExtractor
     url: http://localhost:8000
     dimensions:
-    - email
+    - ["email"]
   - name: EntitySynonymMapper
   - name: ResponseSelector
     epochs: 100

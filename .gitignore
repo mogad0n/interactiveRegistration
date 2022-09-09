@@ -2,3 +2,4 @@ venv/
 .vscode
 models/
 .rasa/
+writeup.txt
